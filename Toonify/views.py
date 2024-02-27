@@ -5,7 +5,7 @@ from .models import Sliderpage,WorkProcedureHeading,WorkProcedureTopic,Toonifica
 import os
 
 
-def homepage(request):
+def Toonify(request):
 
     sliderdata = Sliderpage.objects.all()
     workprocedureheading = WorkProcedureHeading.objects.all()
