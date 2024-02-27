@@ -1,0 +1,90 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Toonify-Null-text</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'url-logo.png' %}" />
+</head>
+<body>
+<div class = "Top-Section">
+
+    <div class="top_bar">
+        <div class = "logo">
+            <a href=""><img src="" alt=""><i class="fa fa-leaf" aria-hidden="true"></i>
+            </a>
+        <h1>Toonify-Null-text</h1>
+
+    </div>
+
+    </div>
+</div>
+
+<div class="Slide_section">
+    <div class="top-section">
+        <div class="background-image">
+            {% for i in sliderdata %}
+            <img src="{{ i.slider_photo.url }}" alt="Your Image Description">
+            <div class="overlay-text">
+                <h1>{{i.slider_heading}}</h1>
+                <p>{{i.slider_paragraph}}</p>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+    <div class="line"></div>
+</div>
+<div class="line-5"></div>
+
+<div class="work_procedure">
+    {% for i in workprocedureheading %}
+    <h1>{{i.work_pro_heading}}</h1>
+    {%endfor%}
+    {%for i in workproceduretopic %}
+    <p>>> {{i.work_pro_paragraph}}</p>
+    {%endfor%}
+</div>
+
+<div class="toonificationSection">
+    <div class="header-section">
+        {% for i in toonificationHeadingdata %}
+        <h1>{{i.toonification_heading}}</h1>
+        {%endfor%}
+    </div>
+    <div class="image-section">
+        {% for i in toonificationimagedata %}
+            <img src="{{ i.toonification_photo.url }}" alt="Your Image Description">
+        {%endfor%}
+        
+    </div>
+    <div class="line1"></div>
+    <div class="line1"></div>
+</div>
+
+
+<div class="hyperparametersSection">
+    <div class="hyper-header-section">
+        {%for i in hyperparametersHeadingdata%}
+        <h1>{{i.hyperparameters_heading}}</h1>
+        {%endfor%}
+    </div>
+    <div class="hyper-image-section">
+
+       {% for i in hyperparametersimagedata %}
+            <img src="{{ i.hyperparameters_photo.url }}" alt="Your Image Description">
+        {%endfor%}
+        
+    </div>
+    <!-- <div class="line1"></div>
+    <div class="line1"></div> -->
+</div>
+
+
+
+
+</body>
+</html>
